@@ -69,7 +69,7 @@ window.submitSong = (e) => {
 
 // Singer Actions
 window.checkLogin = () => {
-    const correctPass = import.meta.env.VITE_SINGER_PASSWORD; 
+    const correctPass = import.meta.env.VITE_MORBAI_PASSWORD; 
     
     if (document.getElementById('singerPass').value === correctPass) { 
         isSingerMode = true;
