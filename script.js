@@ -67,12 +67,14 @@ window.submitSong = (e) => {
     window.closeModal('requestModal');
 };
 
-// Admin Actions
+// Singer Actions
 window.checkLogin = () => {
-    if (document.getElementById('singerPass').value === '1234') { 
+    const correctPass = import.meta.env.VITE_SINGER_PASSWORD; 
+    
+    if (document.getElementById('singerPass').value === correctPass) { 
         isSingerMode = true;
         document.body.classList.add('singer-mode'); 
-        document.getElementById('loginToggleBtn').innerText = '🔴 ออกจากระบบ';
+        document.getElementById('loginToggleBtn').innerText = 'Logout';
         window.closeModal('loginModal');
         document.getElementById('singerPass').value = '';
         renderDashboard(); 
